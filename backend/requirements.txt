@@ -1,0 +1,6 @@
+fastapi==0.115.12
+pandas==2.3.3
+numpy==2.3.4
+pydantic==2.12.3
+tzdata==2025.2
+uvicorn==0.34.2

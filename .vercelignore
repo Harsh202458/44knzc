@@ -1,0 +1,6 @@
+backend/.venv
+backend/tests
+frontend/node_modules
+frontend/dist
+analysis
+.github

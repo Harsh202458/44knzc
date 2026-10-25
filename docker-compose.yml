@@ -1,0 +1,15 @@
+# One command to run everything:  docker compose up --build   ->  http://localhost:8080
+services:
+  api:
+    build: ./backend
+    environment:
+      DEFAULT_CUTOFF: "09:00"
+    ports:
+      - "8000:8000"
+
+  web:
+    build: ./frontend
+    depends_on:
+      - api
+    ports:
+      - "8080:80"
