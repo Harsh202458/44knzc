@@ -164,3 +164,14 @@ def test_bias_correction_uses_only_past_days() -> None:
     assert (corrected[errors["delivery_date"] <= date(2026, 1, 4)] == 1500).all()
     assert (corrected[errors["delivery_date"] >= date(2026, 1, 5)] == 1000).all()
     assert correction_benefit(errors)["improvement"] > 0
+
+
+def test_vercel_requirements_match_backend() -> None:
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[2]
+
+    def pins(p: Path) -> list[str]:
+        return [ln.strip() for ln in p.read_text().splitlines() if ln.strip() and not ln.startswith("#")]
+
+    assert pins(root / "requirements.txt") == pins(root / "backend" / "requirements.txt")

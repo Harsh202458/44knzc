@@ -10,7 +10,7 @@ A web app for a UK energy supplier's **day-ahead power purchasing team**. It sho
 Data: Elexon BMRS — actual wind generation ([FUELHH](https://bmrs.elexon.co.uk/api-documentation/endpoint/datasets/FUELHH/stream), fuel type `WIND`)
 and wind forecasts ([WINDFOR](https://bmrs.elexon.co.uk/api-documentation/endpoint/datasets/WINDFOR/stream)), for purchase decisions made in **January 2026**.
 
-**Live app:** _link added after deployment_ · **Stack:** React + TypeScript (Vite, Recharts) · Python (FastAPI, pandas/numpy) · Docker · Vercel
+**Live app:** https://44knzc.vercel.app · **Stack:** React + TypeScript (Vite, Recharts) · Python (FastAPI, pandas/numpy) · Docker · Vercel
 
 ---
 
@@ -190,7 +190,7 @@ Interactive docs: `/api/docs`.
 
 ## Deployment (Vercel)
 
-`vercel.json` builds the React app as static files and serves `api/index.py` (the FastAPI app plus the
+`vercel.json` (framework set to `vite`) builds the React app as static files and serves `api/index.py` (the FastAPI app plus the
 data snapshot) as a Python serverless function under `/api/*`.
 
 ```bash
