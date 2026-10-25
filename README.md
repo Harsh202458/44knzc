@@ -95,7 +95,8 @@ cd backend && python -m scripts.fetch_snapshot
 │   ├── tests/                   Unit tests (hand-made cases) + API tests (real snapshot)
 │   ├── Dockerfile
 │   ├── requirements.txt         Runtime dependencies (pinned)
-│   └── requirements-dev.txt     + test / lint / type-check tools
+│   ├── requirements-dev.txt     + test / lint / type-check tools
+│   └── pyproject.toml           pytest, ruff and mypy settings
 ├── frontend/                    React app
 │   ├── src/
 │   │   ├── App.tsx              Shell: header, tabs, theme, URL-hash state
@@ -110,6 +111,7 @@ cd backend && python -m scripts.fetch_snapshot
 │   ├── Dockerfile               Build with Node, serve with nginx (+ /api proxy)
 │   └── nginx.conf
 ├── api/index.py                 Vercel serverless entry point (wraps backend/app)
+├── requirements.txt             Python deps for Vercel (same pins as backend/, checked by a test)
 ├── analysis/                    findings.py + FINDINGS.md (numbers quoted in the pitch)
 ├── docs/VIDEO_SCRIPT.md         Outline for the demo video (client pitch + tech walkthrough)
 ├── docker-compose.yml           api (:8000) + web (:8080)
