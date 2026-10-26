@@ -25,3 +25,6 @@ dist/
 
 .vercel
 .env*
+
+# Personal notes (not published)
+docs/VIDEO_SCRIPT.md

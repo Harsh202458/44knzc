@@ -113,7 +113,6 @@ cd backend && python -m scripts.fetch_snapshot
 ├── api/index.py                 Vercel serverless entry point (wraps backend/app)
 ├── requirements.txt             Python deps for Vercel (same pins as backend/, checked by a test)
 ├── analysis/                    findings.py + FINDINGS.md (numbers quoted in the pitch)
-├── docs/VIDEO_SCRIPT.md         Outline for the demo video (client pitch + tech walkthrough)
 ├── docker-compose.yml           api (:8000) + web (:8080)
 ├── vercel.json                  Vercel build and routing
 ├── .github/workflows/ci.yml     Lint, type-check, test, build, Docker smoke test
